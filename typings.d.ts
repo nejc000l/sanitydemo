@@ -1,6 +1,6 @@
 export interface Post{
     _id: string;
-    _createAt:string;
+    _createdAt:string;
     title:string;
     author:{
         name:string;
@@ -28,7 +28,7 @@ export interface Comment{
         type:string;
 
     }
-    _createAt:string;
+    _createdAt:string;
     _id:string;
     _rev:string;
     _type:string;
