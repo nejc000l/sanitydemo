@@ -28,7 +28,7 @@ export interface Comment{
         type:string;
 
     }
-    _createdAt:string;
+    _createAt:string;
     _id:string;
     _rev:string;
     _type:string;
