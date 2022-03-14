@@ -4,7 +4,7 @@ import { Post } from '../../typings'
 import PortableText from 'react-portable-text'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import React, { useState } from 'react'
-
+import { GetStaticPaths, GetStaticProps } from 'next'
 
 interface IFormInput{
   _id:string;
@@ -181,7 +181,7 @@ export const getStaticPaths = async () => {
   return { paths, fallback: 'blocking' }
 }
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const query = `*[_type == "post"&& slug.current ==$slug][0]{
+  const  query = `*[_type == "post"&& slug.current ==$slug][0]{
         _id,
         _createdAt,
         title,
